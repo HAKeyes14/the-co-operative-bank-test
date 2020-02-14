@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react";
+import { formatJoke } from "../utils";
 
 class RandomJokePage extends Component {
   state = {
@@ -12,7 +13,8 @@ class RandomJokePage extends Component {
     this.props
       .fetchRandomJoke()
       .then(joke => {
-        this.setState({ joke, isLoading: false, error: false });
+        const formattedJoke = formatJoke(joke);
+        this.setState({ joke: formattedJoke, isLoading: false, error: false });
       })
       .catch(() => {
         this.setState({ error: true, isLoading: false });
