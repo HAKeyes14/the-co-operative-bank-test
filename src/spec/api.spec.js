@@ -1,4 +1,4 @@
-import { fetchRandomJoke } from "../api";
+import { fetchRandomJoke, fetchMultipleJokes } from "../api";
 
 describe("fetchRandomJoke", () => {
   test("returns an string", async () => {
@@ -16,5 +16,25 @@ describe("fetchRandomJoke", () => {
     await expect(fetchRandomJoke(nameObj)).resolves.toEqual(
       expect.stringContaining("Harry Keyes")
     );
+  });
+});
+
+describe("fetchMultipleJokes", () => {
+  test("returns an array", async () => {
+    await expect(fetchMultipleJokes(5)).resolves.toEqual(expect.any(Array));
+  });
+
+  test("returns the same number of jokes as the passed count", async () => {
+    await expect(fetchMultipleJokes(5)).resolves.toHaveLength(5);
+  });
+
+  test("returns an array of strings", async () => {
+    await expect(fetchMultipleJokes(5)).resolves.toEqual([
+      expect.any(String),
+      expect.any(String),
+      expect.any(String),
+      expect.any(String),
+      expect.any(String)
+    ]);
   });
 });
