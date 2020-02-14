@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 
 class RandomJokePage extends Component {
   state = {
@@ -22,7 +22,7 @@ class RandomJokePage extends Component {
   render() {
     const { joke, isLoading, error } = this.state;
     return (
-      <div>
+      <section>
         <button id="randomJokeButton" onClick={this.handleRandomJokeClick}>
           Random Joke
         </button>
@@ -33,7 +33,7 @@ class RandomJokePage extends Component {
         ) : (
           <p className="joke">{joke}</p>
         )}
-      </div>
+      </section>
     );
   }
 }
