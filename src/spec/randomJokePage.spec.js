@@ -24,10 +24,9 @@ test("Checks function is called when button is clicked", () => {
 
   let joke = wrapper.find(".joke");
   expect(joke.text()).toEqual("");
-  let fred = wrapper.find("#randomJokeButton");
-  expect(fred.text()).toEqual("Random Joke");
 
-  fred.simulate("click");
+  let button = wrapper.find("#randomJokeButton");
+  button.simulate("click");
 
   expect(successfulApiCall.mock.calls.length).toBe(1);
 
