@@ -10,7 +10,7 @@ class ListJokePage extends Component {
 
   fetchJokes = () => {
     this.props
-      .fetchMultipleJokes(30)
+      .fetchMultipleJokes(10)
       .then(jokes => {
         const formattedJokes = jokes.map(joke => {
           return formatJoke(joke);
@@ -50,7 +50,7 @@ class ListJokePage extends Component {
   render() {
     const { jokes, isLoading, error } = this.state;
     return (
-      <section ref="scroll">
+      <section>
         {isLoading ? (
           <p className="loading">Loading</p>
         ) : error ? (

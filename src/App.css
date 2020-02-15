@@ -57,6 +57,12 @@ header h2 span {
   color: #fff;
 }
 
+.Navbar a.active {
+  color: #fff;
+  background-color: #046ab8;
+  font-weight: 700;
+}
+
 button {
   color: #046ab8;
   border: 2px solid #046ab8;
@@ -110,4 +116,13 @@ input {
   padding-left: 10px;
   margin: 10px 0;
   font-size: large;
+}
+
+li {
+  padding: 20px 0px;
+  color: #002663;
+  font-size: large;
+  text-align: center;
+  line-height: 2;
+  list-style-type: none;
 }
