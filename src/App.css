@@ -56,3 +56,58 @@ header h2 span {
   background-color: #002663;
   color: #fff;
 }
+
+button {
+  color: #046ab8;
+  border: 2px solid #046ab8;
+  border-radius: 100px;
+  padding: 15px 30px;
+  font-size: medium;
+  font-weight: 600;
+  width: 200px;
+}
+
+button:hover {
+  color: #fff;
+  background-color: #046ab8;
+}
+
+section {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+section p {
+  padding: 20px 0px;
+  color: #002663;
+  font-size: large;
+  text-align: center;
+  line-height: 2;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: #002663;
+  font-size: large;
+  margin-bottom: 20px;
+}
+
+input {
+  border: 2px solid #002663;
+  border-radius: 6px;
+  height: 44px;
+  padding-left: 10px;
+  margin: 10px 0;
+  font-size: large;
+}
