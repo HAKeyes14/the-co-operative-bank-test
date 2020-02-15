@@ -2,10 +2,14 @@ import React from "react";
 
 const Header = () => {
   return (
-    <>
-      <h1>The Co-operative Bank Tech Test</h1>
-      <h2>A Joke Generator</h2>
-    </>
+    <header>
+      <h1>
+        The <strong>Co-operative</strong> <span>Bank</span> Tech Test
+      </h1>
+      <h2>
+        A <strong>Joke</strong> <span>Generator</span>
+      </h2>
+    </header>
   );
 };
 

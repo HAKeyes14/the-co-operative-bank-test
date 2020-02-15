@@ -3,7 +3,7 @@ import { Link } from "@reach/router";
 
 const Navbar = () => {
   return (
-    <>
+    <nav className="Navbar">
       <Link to="/">
         <p>Random Jokes</p>
       </Link>
@@ -13,7 +13,7 @@ const Navbar = () => {
       <Link to="/list">
         <p>Jokes List</p>
       </Link>
-    </>
+    </nav>
   );
 };
 
