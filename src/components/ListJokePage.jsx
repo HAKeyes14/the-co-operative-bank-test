@@ -31,7 +31,7 @@ class ListJokePage extends Component {
 
   componentDidMount() {
     this.fetchJokes();
-    window.addEventListener("scroll", this.handleScroll);
+    window.addEventListener("scroll", this.handleScroll, { once: true });
   }
 
   handleScroll = () => {
@@ -39,12 +39,12 @@ class ListJokePage extends Component {
     const lastItem = document.querySelector("ul > li:last-child");
     const lastItemOffset = lastItem.offsetTop + lastItem.clientHeight;
     if (yOffset > lastItemOffset) {
-      this.fetchJokes();
       window.removeEventListener("scroll", this.handleScroll);
+      this.fetchJokes();
     }
     setTimeout(() => {
-      window.addEventListener("scroll", this.handleScroll);
-    }, 1000);
+      window.addEventListener("scroll", this.handleScroll, { once: true });
+    }, 200);
   };
 
   render() {
